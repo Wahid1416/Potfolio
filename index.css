@@ -141,12 +141,106 @@ body { background: var(--bg); color: var(--text); }
 .chips li { padding: .5rem; border-radius: 1rem; background: var(--card); border: 1px solid var(--border); color: var(--text); display: flex; align-items: center; justify-content: center; height: 62px; box-shadow: var(--shadow); }
 .chips li img { width: 31px; height: 31px; object-fit: contain; display: block; }
 /* Flask icon theming: black on light, white on dark */
-.flask-icon { background: #ffffff; padding: 2px; border-radius: 6px; }
+.flask-icon { filter:brightness(1) invert(0); padding: 2px; border-radius: 6px; }
 html[data-theme="dark"] .flask-icon { filter: brightness(0) invert(1); }
 
-.socials { max-width: 1000px; margin: .5rem auto 0; display: flex; flex-wrap: wrap; gap: .75rem; }
+/* .socials { max-width: 1000px; margin: .5rem auto 0; display: flex; flex-wrap: wrap; gap: .75rem; }
 .socials a { color: var(--muted); padding: .4rem .6rem; border-radius: .5rem; }
-.socials a:hover { background: var(--card); color: var(--text); }
+.socials a:hover { background: var(--card); color: var(--text); } */
+
+/* ... existing CSS ... */
+
+/* Contact Section */
+.contact-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.contact-info p:first-of-type {
+    max-width: 45ch;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.socials-list {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: .9rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.socials li a {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    padding: .75rem;
+    border-radius: .6rem;
+    transition: background-color .2s ease;
+    background-repeat: no-repeat; /* This is the key fix */
+    background-size: 20px 20px;
+    background-position: 10px center;
+    padding-left: 36px;
+}
+
+.socials li a:hover {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.socials li:nth-child(1) a { /* GitHub */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.18-4.09-1.07A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0 1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.socials li:nth-child(2) a { /* LinkedIn */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'%3E%3C/path%3E%3Crect x='2' y='9' width='4' height='12'%3E%3C/rect%3E%3Ccircle cx='4' cy='4' r='2'%3E%3C/circle%3E%3C/svg%3E");
+}
+
+.socials li:nth-child(3) a { /* Twitter */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4 4.48 4.48 0 0 0 1.05 5.61A4.48 4.48 0 0 1 2 11.23v.5a4.48 4.48 0 0 0 3.56 4.36c-.19.04-.39.07-.59.07-.12 0-.24-.01-.36-.02a4.48 4.48 0 0 0 4.2 3.12 8.95 8.95 0 0 1-5.6 1.94c-.45 0-.89-.02-1.33-.09a12.69 12.69 0 0 0 6.84 2c8.2 0 12.67-6.83 12.67-12.67V10a9 9 0 0 0 2.3-2.61z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.socials li:nth-child(4) a { /* Codeforces */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='10' width='4' height='11' rx='1' ry='1'%3E%3C/rect%3E%3Crect x='10' y='3' width='4' height='18' rx='1' ry='1'%3E%3C/rect%3E%3Crect x='17' y='8' width='4' height='13' rx='1' ry='1'%3E%3C/rect%3E%3C/svg%3E");
+    /* Keep padding-left: 36px to align with other icons */
+    padding-left: 36px;
+}
+
+
+/* Dark mode icon colors */
+html[data-theme="dark"] .socials li:nth-child(1) a {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0c-2.73-1.83-3.91-1.18-4.09-1.07A5.07 5.07 0 0 0 4 4.77a5.44 5.44 0 0 0 1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22'%3E%3C/path%3E%3C/svg%3E");
+}
+html[data-theme="dark"] .socials li:nth-child(2) a {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z'%3E%3C/path%3E%3Crect x='2' y='9' width='4' height='12'%3E%3C/rect%3E%3Ccircle cx='4' cy='4' r='2'%3E%3C/circle%3E%3C/svg%3E");
+}
+html[data-theme="dark"] .socials li:nth-child(3) a {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23a1a1aa' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1a10.66 10.66 0 0 1-9-4 4.48 4.48 0 0 0 1.05 5.61A4.48 4.48 0 0 1 2 11.23v.5a4.48 4.48 0 0 0 3.56 4.36c-.19.04-.39.07-.59.07-.12 0-.24-.01-.36-.02a4.48 4.48 0 0 0 4.2 3.12 8.95 8.95 0 0 1-5.6 1.94c-.45 0-.89-.02-1.33-.09a12.69 12.69 0 0 0 6.84 2c8.2 0 12.67-6.83 12.67-12.67V10a9 9 0 0 0 2.3-2.61z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* ... existing CSS ... */
+
 
 .link { color: var(--accent); text-underline-offset: 3px; }
 .link:hover { text-decoration: underline; }
