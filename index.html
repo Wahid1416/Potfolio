@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <title>Portfolio • Coder/Developer</title>
+    <meta name="description" content="Personal portfolio of a coder/developer: projects, experience, skills, and contact.">
+    <link rel="preload" as="image" href="images/profile.jpeg">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/profile.svg" type="image/svg+xml">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" id="top">
+        <nav class="nav" aria-label="Primary">
+            <a class="brand" href="#top" aria-label="Home">&lt;Coder/&gt;</a>
+            <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">🌓</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-content">
+                <img src="images/profile.jpeg" alt="Profile photo" width="200" height="200" class="avatar" loading="eager" decoding="async">
+                <h1 class="name" id="name">Syed Wahid Alam</h1>
+                <p class="tagline">Competitive programmer and full-stack developer blending problem-solving with creativity. I enjoy building intelligent applications, leveraging skills in both competitive programming (Codeforces) and machine learning to create robust web solutions.</p>
+                <div class="cf-stats" aria-live="polite" data-cf-handle="mdisharaf">
+                    <div class="cf-rating">
+                        <span class="label">Codeforces rating:</span>
+                        <span id="cf-rating-value" class="value">—</span>
+                    </div>
+                    <div class="cf-latest">
+                        <span class="label">Latest contest:</span>
+                        <span id="cf-latest-value" class="value">—</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="grid projects-grid">
+                <article class="card">
+                    <div class="card-logo"><span class="emoji" aria-hidden="true">🍽️</span><span class="visually-hidden">Restaurant Management System</span></div>
+                    <h3>Complete Restaurant Management System</h3>
+                    <p>Full‑stack system using Flask Blueprints (Admin/Customer/Kitchen) with MySQL, Twilio OTP reset, session/device binding, image uploads, PDF bill generation (ReportLab), analytics dashboards (Chart.js), date‑filtered reports, payment methods, and full order flow (cart → kitchen → billing). Deployed with Gunicorn.</p>
+                    <div class="card-actions">
+                        <a class="btn disabled" href="#" aria-disabled="true" title="Link coming soon">Live (coming soon)</a>
+                        <a class="btn ghost" href="https://github.com/Wahid1416/Restraunt_app" target="_blank" rel="noopener">Source</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-logo"><img src="images/filo.png" alt="Campus Collab logo" width="28" height="28"></div>
+                    <h3>Campus Collab</h3>
+                    <p>Kriti (IIT Guwahati) project: MERN platform for students to find collaborators and projects. Built dynamic front‑end in React to reduce codebase and response time. Implemented heuristic spam filtering, reducing per‑message processing by ~67ms.</p>
+                    <div class="card-actions">
+                        <a class="btn" href="https://fontend-campus-collab-h33gd08s2-soumyasavarns-projects.vercel.app/login" target="_blank" rel="noopener">Live</a>
+                        <a class="btn ghost" href="https://github.com/Tanmay7404/Campus_Collaboration_Kapili" target="_blank" rel="noopener">Source</a>
+                    </div>
+                </article>
+                <article class="card">
+                    <div class="card-logo"><img src="images/buddy.png" alt="Buddy logo" width="56" height="56"></div>
+                    <h3>Buddy — Real‑time Video Chat Application</h3>
+                    <p>Full‑stack video chat platform supporting 20+ concurrent users with sub‑200ms latency across web/desktop using WebRTC and Socket.IO. Auto room creation and intelligent FIFO queue pairing improve stability by ~30% and reduce setup time by ~40%. Built with React.js (frontend), Flask + Socket.IO (backend), deployed on Render with health checks.</p>
+                    <div class="card-actions">
+                        <a class="btn" href="https://buddy-frontend-hiz3.onrender.com" target="_blank" rel="noopener">Live</a>
+                        <a class="btn ghost" href="https://github.com/Sidd2209/Buddy" target="_blank" rel="noopener">Source</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="list">
+                <div class="item">
+                    <div class="item-head">
+                        <h3>Getting Started</h3>
+                        <span class="time">Present</span>
+                    </div>
+                    <p>No professional experience yet — actively building projects and open to internships/opportunities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <div class="skills">
+                <ul class="chips">
+                    <li title="Python"><img src="images/python.png" alt="Python"><span class="visually-hidden">Python</span></li>
+                    <li title="C / C++"><img src="images/c-.png" alt="C / C++"><span class="visually-hidden">C / C++</span></li>
+                    <li title="JavaScript"><img src="images/js.png" alt="JavaScript"><span class="visually-hidden">JavaScript</span></li>
+                    <li title="HTML"><img src="images/html-5.png" alt="HTML"><span class="visually-hidden">HTML</span></li>
+                    <li title="CSS"><img src="images/css-3.png" alt="CSS"><span class="visually-hidden">CSS</span></li>
+                    <li title="React / React Native"><img src="images/react-native.png" alt="React / React Native"><span class="visually-hidden">React / React Native</span></li>
+                    <li title="Flask"><img class="white-bg" src="images/Flask.svg" alt="Flask" style="filter: brightness(0) invert(1);"><span class="visually-hidden">Flask</span></li>
+                    <li title="Flutter"><img src="images/flutter.png" alt="Flutter"><span class="visually-hidden">Flutter</span></li>
+                    <li title="AutoCAD"><img src="images/Autodesk-AutoCAD-subscription-1.jpg" alt="AutoCAD"><span class="visually-hidden">AutoCAD</span></li>
+                    <li title="Photoshop"><img src="images/Adobe_Photoshop_CC_icon.svg.png" alt="Photoshop"><span class="visually-hidden">Photoshop</span></li>
+                    <li title="Illustrator"><img src="images/adobe-illustrator-icon-free-png.webp" alt="Adobe Illustrator"><span class="visually-hidden">Adobe Illustrator</span></li>
+                    <li title="Notion"><img src="images/Notion-logo.svg.png" alt="Notion"><span class="visually-hidden">Notion</span></li>
+                    <li title="MongoDB"><img src="images/free-mongodb-icon-svg-download-png-1175140.webp" alt="MongoDB"><span class="visually-hidden">MongoDB</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>
+                <a class="link" href="mailto:you@example.com">you@example.com</a>
+            </p>
+            <ul class="socials">
+                <li><a href="#" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a></li>
+                <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+                <li><a href="#" target="_blank" rel="noopener" aria-label="Twitter">Twitter</a></li>
+                <li><a href="https://codeforces.com/profile/mdisharaf" target="_blank" rel="noopener" aria-label="Codeforces">Codeforces</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>© <span id="year"></span> Your Name</p>
+        <a href="#top" class="to-top">Back to top ↑</a>
+    </footer>
+
+    <script src="index.js" defer></script>
+</body>
+</html>
+
