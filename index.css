@@ -402,3 +402,54 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+/* Hero layout fix: keep the introduction in the wide column beside the portrait */
+.hero-content {
+  grid-template-columns: 168px minmax(0, 1fr);
+  grid-template-rows: auto auto auto;
+  column-gap: 2.5rem;
+  row-gap: 1rem;
+  align-items: center;
+}
+.hero-content > .avatar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  align-self: start;
+}
+.hero-content > .name {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.hero-content > .tagline {
+  grid-column: 2;
+  grid-row: 2;
+  width: 100%;
+  max-width: 68ch;
+  margin: 0;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.8;
+}
+.hero-content > .cf-stats {
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+@media (max-width: 720px) {
+  .hero-content {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    row-gap: 1.1rem;
+    justify-items: start;
+    text-align: left;
+  }
+  .hero-content > .avatar,
+  .hero-content > .name,
+  .hero-content > .tagline,
+  .hero-content > .cf-stats {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .hero-content > .tagline { max-width: 65ch; }
+}
